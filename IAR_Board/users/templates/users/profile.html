@@ -1,0 +1,49 @@
+{% extends "home_page/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+    <h1 class="display-4">Account Information</h1>
+    <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th scope="col">Username</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>{{ user.username }}</td>
+            <td>{{ user.email }}</td>
+          </tr>
+        </tbody>
+    </table>
+
+    <body>
+
+        <div class="container">
+          <h2>Posts</h2>
+          <p>Listed below are all of your active posts.</p>            
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>City/Area</th>
+                <th>Posted Date</th>
+              </tr>
+            </thead>
+            <tbody>
+            {% if context %}
+            {% for x in context %}
+              <tr>
+                <td>{{ x.postingTitle }}</td>
+                <td>{{ x.city }}</td>
+                <td>Posted date needed</td>
+              </tr>
+            {% endfor %}
+            {% endif %}
+            </tbody>
+          </table>
+        </div>
+        
+    </body>
+{% endblock content %}
