@@ -19,7 +19,7 @@ from home_page.views import home
 from about.views import about
 from users import views as user_views
 from django.contrib.auth import views as auth_views
-from posts.views import addPost
+from posts.views import addPost, viewPost
 from users.views import profile
 
 
@@ -32,4 +32,5 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name = 'users/logout.html'), name = 'logout'),
     path('add_post/', addPost, name = 'add_post'),
     path('profile/', profile, name = 'profile'),
+    path('view_post/', viewPost, name = 'view_post'),
 ]

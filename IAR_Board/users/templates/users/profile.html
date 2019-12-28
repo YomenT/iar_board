@@ -22,7 +22,7 @@
 
         <div class="container">
           <h2>Posts</h2>
-          <p>Listed below are all of your active posts.</p>            
+          <p>Listed below are all of your active posts.  Click on the title to view/edit the post.</p>            
           <table class="table">
             <thead>
               <tr>
@@ -35,7 +35,7 @@
             {% if context %}
             {% for x in context %}
               <tr>
-                <td>{{ x.postingTitle }}</td>
+                <td><a href = "{% url 'view_post' %}" class="stretched-link">{{ x.postingTitle }}</a></td>
                 <td>{{ x.city }}</td>
                 <td>Posted date needed</td>
               </tr>

@@ -1,0 +1,35 @@
+{% extends "home_page/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<dl class="row">
+    <dt class="col-sm-3">Title</dt>
+    <dd class="col-sm-9">(postingTitle)</dd>
+</dl>
+
+<dl class="row">
+    <dt class="col-sm-3">City</dt>
+    <dd class="col-sm-9">(city)</dd>
+</dl>
+
+<dl class="row">
+    <dt class="col-sm-3">Postal Code</dt>
+    <dd class="col-sm-9">(postalCode)</dd>
+</dl>
+
+<dl class="row">
+    <dt class="col-sm-3">Description</dt>
+    <dd class="col-sm-9">(description)</dd>
+</dl>
+
+<dl class="row">
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">(email)</dd>
+</dl>
+
+<dl class="row">
+    <dt class="col-sm-3">Phone Number</dt>
+    <dd class="col-sm-9">(phoneNumber)</dd>
+</dl>
+    
+{% endblock content %}

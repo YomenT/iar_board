@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import AddPostForm
 from django.contrib import messages
+from .models import AddPost
 
 def addPost(request):
     if request.method == 'POST':
@@ -12,3 +13,7 @@ def addPost(request):
     else:
         form = AddPostForm()
         return render(request, "posts/add_posts.html", {'form': form})
+
+def viewPost(request):
+    context = AddPost.objects.all()
+    return render(request, "posts/view_posts.html", {'context': context})
